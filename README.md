@@ -14,7 +14,7 @@ This project is for parsing nuclear data and reconstructing differential cross-s
 
 ### Build Pybind11 Extension
 
-Navigate to the `reconstruction` directory and build the extension:
+Navigate to the `recon` directory and build the extension:
 
 ```sh
 cd reconstruction
