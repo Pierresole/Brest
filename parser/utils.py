@@ -4,17 +4,16 @@ import numpy as np
 
 def parse_ID_line(line):
     # Extract the last 14 digits of the line (excluding spaces)
-    pos = line.strip()[66:]
+    pos = line[66:]
 
     # Digits 0,1,2 and 3 of POS make a number called MAT
-    mat = int(pos[0:4])
+    mat = int(pos[0:5])
 
     # Digits 4 and 5 of POS make a number called MF
-    mf = int(pos[4:6])
+    mf = int(pos[5:6])
 
     # Digits 6, 7 and 8 of POS make a number called MT
     mt = int(pos[6:9])
-
     return mat, mf, mt
 
 def parse_line(line):

@@ -1,4 +1,4 @@
-from .utils import find_target_block, parse_LIST_line
+from .utils import find_target_block, parse_TAB1
 
 def read_MF3(file_path, targetMT):
     """
@@ -16,10 +16,7 @@ def read_MF3(file_path, targetMT):
     block_lines = find_target_block(file_path, targetMF, targetMT)
     energies = []
     cross_sections = []
+    
+    C1, C2, L1, L2, NR, NP, NBT, INT, x_values, y_values, new_index =  parse_TAB1(block_lines, 1)
 
-    for line in block_lines[3:]:
-        line_energies, line_cross_sections = parse_LIST_line(line)
-        energies.extend(line_energies)
-        cross_sections.extend(line_cross_sections)
-
-    return energies, cross_sections
+    return x_values, y_values

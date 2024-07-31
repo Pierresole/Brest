@@ -1,0 +1,7 @@
+interpolate.cpp
+setup.py
+sigma.cpp
+sigma.egg-info/PKG-INFO
+sigma.egg-info/SOURCES.txt
+sigma.egg-info/dependency_links.txt
+sigma.egg-info/top_level.txt
